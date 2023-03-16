@@ -1,0 +1,46 @@
+
+
+
+<div class="main">
+
+<div fxLayoutAlign="center center" fxFlexFill class="main-div"> <!-- Place the card to center-->
+
+  <mat-card fxFlex="25" fxFlex.lt-sm="90" > <!--Using fxFlex, card taking 25% of the screen and 90% at mobile view -->
+  <mat-toolbar ><span class="title-center">Login to get started</span></mat-toolbar>
+  <form [formGroup]="formData" (ngSubmit)="checkUser(formData)" fxLayoutAlign="stretch" fxLayout="column" class="login-padd">
+      <mat-form-field >
+        <mat-label>Add user</mat-label>
+        <input matInput placeholder="User Name"  formControlName="userName" >
+
+      </mat-form-field>
+      <div *ngIf="isFormSubmitted && formData.controls['userName'].errors && !formData.valid">
+        <div style="color:red" *ngIf="formData.controls['userName'].errors['required']">
+         User name is required.
+        </div>
+        <div *ngIf="formData.controls['userName'].errors['minlength']">
+         Min length is 5 character.
+        </div>
+       </div>
+      <mat-form-field >
+      <mat-label>Add Password</mat-label>
+        <input matInput placeholder="Password " type="password" formControlName="userPass">
+
+      </mat-form-field>
+      <div *ngIf="isFormSubmitted && formData.controls['userPass'].errors && !formData.valid">
+        <div style="color:red" *ngIf="formData.controls['userPass'].errors['required']">
+          Password is required.
+        </div>
+        <div *ngIf="formData.controls['userPass'].errors['maxlength']">
+           Max length should be 8 digit.
+        </div>
+      </div>
+
+      <div class="title-center">
+      <button mat-raised-button color="primary"   type="submit">Login</button>
+      </div>
+    </form>
+</mat-card>
+
+</div>
+
+</div>

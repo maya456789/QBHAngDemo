@@ -1,0 +1,66 @@
+
+ <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayout.xs="column">
+  <div fxFlex="70">
+    <mat-card fxFlex.lt-sm="90">
+      <mat-card-title>Create Client</mat-card-title>
+
+      <form [formGroup]="createClient" class="form-field-full">
+       <div fxLayout="row wrap" fxLayoutGap="10px grid">
+           <div fxFlex="40" fxFlex.lt-sm="100"  >
+            <mat-form-field appearance="outline" >
+              <mat-label>Enter Name</mat-label>
+              <input matInput placeholder="Add Name"  formControlName="name">
+             </mat-form-field>
+             <div *ngIf="isSubmitted && createClient.controls['name'].errors && !createClient.valid">
+              <div *ngIf="createClient.controls['name'].errors['required']" class="errClr">
+                Name is required.
+              </div>
+           </div>
+            </div>
+
+            <div fxFlex="40" fxFlex.lt-sm="100"  >
+            <mat-form-field appearance="outline" >
+              <mat-label>Enter Email</mat-label>
+              <input matInput placeholder="Add project"  formControlName="email">
+             </mat-form-field>
+             <div *ngIf="createClient.controls['email'].errors && isSubmitted  && !createClient.valid">
+              <div *ngIf="createClient.controls['email'].errors['required']" class="errClr">email is required</div>
+              <div *ngIf="createClient.controls['email'].errors['pattern']" class="errClr">Please provide a valid email address</div>
+          </div>
+            </div>
+
+            <div fxFlex="40" fxFlex.lt-sm="100"  >
+            <mat-form-field appearance="outline" >
+              <mat-label>Enter Phone Number</mat-label>
+              <input matInput placeholder="Add project"  formControlName="phone">
+             </mat-form-field>
+             <div *ngIf="isSubmitted && createClient.controls['phone'].errors && !createClient.valid">
+              <div *ngIf="createClient.controls['phone'].errors['required']" class="errClr">
+                Phone number required.
+              </div>
+              <div *ngIf="createClient.controls['phone'].errors['minlength']" class="errClr">
+                    Number should be 10.
+              </div>
+              <div *ngIf="createClient.controls['phone'].errors['maxlength']" class="errClr">
+                    Number should not be more than 10.
+              </div>
+              <div *ngIf="createClient.controls['phone'].errors['pattern']"class="errClr" >
+                  Only digits are allowed.
+              </div>
+           </div>
+            </div>
+
+
+
+        </div>
+          <mat-divider></mat-divider>
+        <div class="title-center">
+
+          <button mat-raised-button (click)="onSubmit(createClient)" color="primary">SAVE</button>
+        </div>
+
+      </form>
+
+    </mat-card>
+  </div>
+</div>

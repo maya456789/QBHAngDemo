@@ -1,0 +1,58 @@
+
+mat-card{
+  margin-top: 20px;
+
+}
+
+mat-card-title{
+  padding: 30px;
+  background-color: lightblue;
+
+}
+form{
+  margin-top: 20px;
+}
+
+mat-form-field{
+  width: 90%;
+  padding: 10px;
+}
+
+.example-form-field {
+  margin-right: 20px;
+}
+
+.errAlignment{
+  color: red;margin-left: 20px;
+}
+
+.example-h2 {
+  margin: 10px;
+}
+
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin-left: 20px;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+mat-radio-group{
+  margin-left:30px;
+}
+
+.title-center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#content{
+  width:595;
+  height:800;
+}

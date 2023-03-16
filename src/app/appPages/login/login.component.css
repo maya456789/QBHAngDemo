@@ -1,0 +1,66 @@
+
+
+.main-div mat-card {
+  padding: 0px;
+  background-color: white;
+}
+.login-padd{
+  padding: 20px;
+}
+
+mat-card{
+  margin-top: 250px;
+}
+.main{
+  background-color: blue;
+  height: 400px;
+  border-radius: 45px;
+}
+
+section {
+    display: table;
+  }
+
+  .title-center {
+   /* margin: 0 auto;*/
+   display:flex;
+   justify-content: center;
+  }
+
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .example-button-container {
+    display:flex;
+    justify-content: center;
+    width: 120px;
+    flex: 1 1 auto;
+  text-align: center;
+
+
+  }
+
+  .container .cardWrap div{
+    height: 300px;
+    border:2px solid gray;
+    }
+

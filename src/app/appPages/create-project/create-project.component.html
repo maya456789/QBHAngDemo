@@ -1,0 +1,22 @@
+
+<p>Click the Download button to download below table in pdf format:-> <button mat-button (click)="makePDF()">Download</button></p>
+
+
+<div id="content" #content>
+  <table border="1" rules="all">
+    <tr>
+      <th>Sr No.</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+    <tr *ngFor="let dt of result;let i=index">
+      <td>{{i+1}}</td>
+      <td>{{dt.name}} </td>
+      <td>{{dt.email}}</td>
+      <td>{{dt.phone}}</td>
+    </tr>
+
+  </table>
+
+</div>

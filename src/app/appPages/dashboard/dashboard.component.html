@@ -1,0 +1,134 @@
+<div class="grid-container">
+  <h1 class="mat-h1">Dashboard</h1>
+  <mat-grid-list cols="5" rowHeight="120px" >
+    <mat-grid-tile >
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Registered</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-card style=" border-left: 6px solid blue;" class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Closed</div>
+          {{data}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Running</div>
+          {{many}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile >
+      <mat-card style=" border-left: 6px solid blue;" class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Closure delay</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile >
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Cancelled</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="./assets/img/img_5terre.jpg">
+    <img src="assets/img/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="./assets/img/img_forest.jpg">
+    <img src="assets/img/img_forest.jpg" alt="Forest" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="../assets/img/img_lights.jpg">
+    <img src="assets/img/img_lights.jpg" alt="Northern Lights" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="./assets/img/img_mountains.jpg">
+    <img src="assets/img/img_mountains.jpg" alt="Mountains" width="600" height="400">
+  </a>
+  <div class="desc">Add a description of the image here</div>
+</div>
+
