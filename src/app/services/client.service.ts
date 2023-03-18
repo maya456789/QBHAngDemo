@@ -26,5 +26,13 @@ export class ClientService {
     );
 }
 
+deleteClientInfo(ciD:any):Observable<any>{
+  return this.http.delete<any>(`${environment.API_DELETE_CLIENT}/${ciD}`).pipe(
+    map((user) => {
+      return user;
+    })
+  );
+}
+
 
 }
