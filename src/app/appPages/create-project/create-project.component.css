@@ -8,3 +8,9 @@
   width:595px;
   height:700px;
 }
+
+mat-paginator{
+display:flex;
+justify-content: start;
+  
+}
