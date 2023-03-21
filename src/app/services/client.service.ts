@@ -34,5 +34,21 @@ deleteClientInfo(ciD:any):Observable<any>{
   );
 }
 
+getSingleClient(sid:any):Observable<any>{
+    return this.http.get(`${environment.API_GET_SINGLE_CLIENT}/${sid}`).pipe(
+      map((client)=>{
+         return client;
+      })
+    )
+}
+
+updateClient(editedData:any):Observable<any>{
+  return this.http.post<any>(`${environment.API_EDIT_CLIENT}`,editedData).pipe(
+    map((user) => {
+      return user;
+    })
+  );
+}
+
 
 }

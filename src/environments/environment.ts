@@ -11,6 +11,8 @@ export const environment = {
   API_GET_CLIENT:`${SERVER_URL}/client_info`,
   API_ADD_CLIENT:`${SERVER_URL}/client_info/addClient`,
   API_DELETE_CLIENT:`${SERVER_URL}/client_info/deleteClient`,
+  API_GET_SINGLE_CLIENT:`${SERVER_URL}/client_info/edit_client`,
+  API_EDIT_CLIENT:`${SERVER_URL}/client_info/editedClient`,
   API_AUTHENTICATEUSER: `${SERVER_URL}/authUser`,
   API_GETUSERDATA:`${SERVER_URL}/authorizeUser`,
   API_ADD_PRODUCT: `${SERVER_URL}/addStock`,

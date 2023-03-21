@@ -26,6 +26,7 @@ import { PupComponent } from './viewChildDecorator/pup.component';
 import { ClientService } from './services/client.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AddClientComponent } from './appPages/add-client/add-client.component';
+import { EditClientComponent } from './appPages/edit-client/edit-client.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { AddClientComponent } from './appPages/add-client/add-client.component';
     ListProjectComponent,
     SharkDirective,
     PupComponent,
-    AddClientComponent
+    AddClientComponent,
+    EditClientComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { ClientService } from 'src/app/services/client.service';
 import {MatPaginator} from '@angular/material/paginator';
 import {jsPDF} from 'jspdf';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 interface Product {
   id: number;
@@ -28,7 +29,7 @@ export class CreateProjectComponent implements OnInit {
   result:any;
 
 
-  constructor(private fbuild:FormBuilder,private clientServic:ClientService){
+  constructor(private fbuild:FormBuilder,private clientServic:ClientService,private route:Router){
 
 
   }
@@ -61,6 +62,12 @@ export class CreateProjectComponent implements OnInit {
     )
 
   }
+
+ public editClient(clientId:any){
+
+  this.route.navigate([`homepage/edit-client/${clientId}`]);
+
+ }
 
   public makePDF(){
     let pdf = new jsPDF('p','pt','a4');
