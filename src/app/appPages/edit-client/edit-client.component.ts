@@ -65,6 +65,12 @@ export class EditClientComponent implements OnInit {
      this.clientServic.updateClient(updateClient.value).subscribe(
       res=>{
         console.log("Response From Server:",res);
+        if(res[0]){
+          alert("Client Updated successfully");
+          this.rout.navigate(['/homepage/create-project'])
+        }else{
+          alert("Error occur, not updated ");
+        }
       }
      )
 

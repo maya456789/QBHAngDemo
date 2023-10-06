@@ -104,7 +104,7 @@
   </mat-grid-list>
 </div>
 
-<div class="gallery">
+<!-- <div class="gallery">
   <a target="_blank" href="./assets/img/img_5terre.jpg">
     <img src="assets/img/img_5terre.jpg" alt="Cinque Terre" width="600" height="400">
   </a>
@@ -131,4 +131,31 @@
   </a>
   <div class="desc">Add a description of the image here</div>
 </div>
+ -->
+ <p>
+  The media pictures are powered by
+  <a href="https://github.com/nzbin/photoviewer" target="_blank">PhotoViewer</a>,
+  you can click the picture to enlarge it.
+</p>
+ <mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let image of galleryData; let i = index;">
+    <mat-grid-tile-header>
+      <span matLine>Gallery Image: {{ i+1 }}</span>
+      <span matLine> {{image.imgDesc}}</span>
+    </mat-grid-tile-header>
 
+    <img
+         [src]="image.src"
+         (click)="preview(i)" />
+
+  </mat-grid-tile>
+</mat-grid-list>
+
+ <!-- <div class="gallery">
+  <div *ngFor="let data of galleryData;let i = index;">
+
+    <img [src]="data.src" alt="Mountains" width="100%" height="100%" (click)="preview(i)">
+
+  <div class="desc">{{data.imgDesc}}</div>
+  </div>
+</div> -->

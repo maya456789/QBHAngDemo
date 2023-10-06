@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'homepage',component:SidebarComponent,
   children:[
-    // {path:'dashboard',component:DashboardComponent},
+     {path:'dashboard',component:DashboardComponent},
     {path:'create-client',component:AddClientComponent},
     {path:'edit-client/:id',component:EditClientComponent},
     {path:'create-project',component:CreateProjectComponent},
